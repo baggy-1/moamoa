@@ -64,7 +64,7 @@ export async function POST(request: Request) {
       userDbId = newUser.id;
     }
 
-    const { data: link, error: linkError } = await supabase
+    const { error: linkError } = await supabase
       .from('links')
       .insert({
         user_id: userDbId,

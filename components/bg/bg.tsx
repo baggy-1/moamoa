@@ -1,23 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react';
 
 const Bg = () => {
-  // const [positions, setPositions] = useState<Array<{left: string, top: string}>>(Array.from({length: 20}, () => ({
-  //   left: `${Math.random() * 100}%`,
-  //   top: `${Math.random() * 100}%`
-  // })));
-  
-  // useEffect(() => {
-  //   // 컴포넌트가 마운트된 후에만 위치값 생성
-  //   const newPositions = Array.from({length: 20}, () => ({
-  //     left: `${Math.random() * 100}%`,
-  //     top: `${Math.random() * 100}%`
-  //   }));
-  //   setPositions(newPositions);
-  // }, []);
-
   return (
     <>
           {/* Gradient Background */}
