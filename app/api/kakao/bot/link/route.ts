@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const kakaoRequest = await request.json() as KakaoRequest;
     
     const userId = kakaoRequest.userRequest.user.id;
-    const inputLink = kakaoRequest.action.detailParams[entity.sysUrl];
+    const inputLink = kakaoRequest.action.detailParams[entity.sysUrl].origin;
     
     if (!inputLink) {
       return Response.json({
