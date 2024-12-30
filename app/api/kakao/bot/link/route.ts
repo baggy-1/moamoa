@@ -9,6 +9,11 @@ interface KakaoRequest {
   };
   action: {
     params: Record<string, string>;
+    detailParams: Record<string, {
+      origin: string,
+      value: string,
+      groupName: string
+    }>
   };
 }
 
@@ -18,8 +23,8 @@ export async function POST(request: Request) {
     const kakaoRequest = await request.json() as KakaoRequest;
     
     const userId = kakaoRequest.userRequest.user.id;
-    const inputLink = kakaoRequest.action.params[entity.sysUrl];
-
+    const inputLink = kakaoRequest.action.detailParams[entity.sysUrl];
+    
     if (!inputLink) {
       return Response.json({
         version: "2.0",
